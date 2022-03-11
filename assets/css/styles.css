@@ -2,11 +2,42 @@ body {
     margin: 0;
 }
 
+/* Header start */
 header {
     display: flex;
     justify-content: space-between;
 }
 
-nav {
+header h1 {
+    display: inline-block;
+    background: blue;
+    text-align: right;
+    height: 30px;
+    width: 200px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+nav ul li a {
     text-decoration: none;
 }
+/* Header end */
+#profile-image {
+    width: 200px;
+    height: 200px;
+}
+
+#profile-image img{
+    max-width: 100%;    
+}
+/* Hero Start */
