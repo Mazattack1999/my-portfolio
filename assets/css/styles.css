@@ -1,13 +1,14 @@
 :root {
-    --color1: #0E185F;
+    /* --color1: #0E185F;
     --color2: #2FA4FF;
     --color3: #00FFDD;
-    --color4: #E8FFC2;
+    --color3: white;
+    --color4: #E8FFC2; */
 
-    /* --color1: #495371;
-    --color2: #74959A;
-    --color3: #98B4AA;
-    --color4: #F1E0AC; */
+    --color1: #051367;
+    --color2: #2D31FA;
+    --color3: #5D8BF4;
+    --color4: #DFF6FF;
 }
 
 * {
@@ -19,7 +20,7 @@
 body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
-    background: var(--color3);
+    background: var(--color2);
 }
 
 /* Header start */
@@ -37,8 +38,9 @@ header h1 {
     align-items: center;
     height: 30px;
     width: 200px;
-    color: var(--color2);
+    color: var(--color4);
     font-weight: bold;
+    text-shadow: 0 0 15px black;
 }
 
 header nav {
@@ -58,8 +60,9 @@ header nav ul {
 nav ul li a {
     text-decoration: none;
     font-weight: bold;
-    color: var(--color2);
+    color: var(--color4);
     padding: 10px 15px;
+    text-shadow: 0 0 15px black;
 }
 /* Header end */
 
@@ -80,12 +83,12 @@ nav ul li a {
     display:flex;
     justify-content: center;
     background: var(--color1);
-    color: var(--color2);
-    width: 80%;
+    color: var(--color4);
+    width: 330px;
     height: 50px;
     bottom: 20px;
     right: 0px;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #profile-image {
@@ -106,6 +109,7 @@ nav ul li a {
     background: var(--color3);
     padding: 10px 0;
     width: 100%;
+    height: auto;
 }
 
 .section-title {
@@ -121,8 +125,11 @@ nav ul li a {
 /* About me section start */
 #about-me p{
     text-align: center;
-    padding: 0 10px;
+    font-size: 20px;
     color: var(--color1);
+    line-height: 1.5;
+    margin: 10px auto 0 auto;
+    padding: 0 10px;
 }
 
 /* About me section end */
@@ -132,6 +139,7 @@ nav ul li a {
     display:flex;
     flex-direction: column;
     width: 100%;
+    height: auto;
     padding: 0 10px;
     margin: 0 10px;
 }
@@ -140,25 +148,27 @@ nav ul li a {
     display: flex;
     justify-content: center;
     width: 100%;
+    height: auto;
     padding: 0 20px;
 }
 
 .primary-work .published-work {
     width: 96%;
     background-size: 200%;
+    height: 30vh;
 }
 
 .published-work {
     position: relative;
     display: inline-block;
-    height: 150px;
+    height: 15vh;
     width: 46%;
     background-image: url(../images/coming-soon.webp); /*Image by RossManYYC from https://pixabay.com/photos/coming-soon-chalk-board-blackboard-2550190/*/
-    background-size: cover;
+    background-size: 100%;
     text-decoration: none;
     padding: 0;
     margin: 10px 2px;
-    border: 2px solid var(--color2);
+    border: 2px solid var(--color1);
     border-radius: 1px;
 }
 
@@ -174,16 +184,18 @@ margin-top: 5px;
 .work-title {
     display: inline-block;
     position: absolute;
-    color: var(--color1);
     bottom: 15px;
     left: 0px;
-    background: var(--color2);
-    padding: 5px
+    background: var(--color1);
+    padding: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 1);
 }
 
 .work-title h3 {
     font-size: 20px;
     font-weight: bold;
+    color: var(--color4);
+    text-shadow: 0 0 15px black;
 }
 
 .work-title p {
@@ -211,21 +223,23 @@ margin-top: 5px;
 
 /* Contact me section start */
 #contact-me {
-    height: 100px;
+    height: 150px;
 }
 
 .contact-info {
     display: flex;
     justify-content: center;
+    height: 90%;
 }
 .contact-info ul {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    padding: 0 25px 0 0;
-    margin-top: 20px;
+    /* padding: 0 25px 0 0; */
+    margin-top: 10px;
 }
 
 .contact-info ul li a {
@@ -240,16 +254,51 @@ margin-top: 5px;
 /* Contact me section end */
 
 /* Media Queries */
-@media screen and (min-width: 575px) {
-    
+@media (min-width: 575px) {
+    /* Work section start */
+    .primary-work .published-work{
+        height: 250px;
+    }
+
+    .published-work {
+        height: 100px;
+    }
+
+    .secondary-work {
+        margin-top: 20px;
+    }
+    /* Work section end */
+
+    /* Contact me section start */
+    #contact-me {
+        height: 100px;
+    }
+    .contact-info ul {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 25px 0 0;
+    }
+    /* Contact me section end */
  }
  
  /* MEDIA QUERY FOR TABLETS AND SMALLER */
- @media screen and (min-width: 768px) {
-     
+ @media (min-width: 768px) {
+     header {
+         flex-direction: row;
+         justify-content: space-between;
+         padding: 20px 10px 20px 0;
+         position: relative;
+     }
+
+     header h1 {
+        background: var(--color2);
+        justify-content: flex-end;
+        align-items: center;
+        padding: 5px 5px 5px 0;
+     }
  }
  
  /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
- @media screen and (min-width: 980px) {
+ @media (min-width: 980px) {
     
  }
