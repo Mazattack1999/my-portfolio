@@ -19,6 +19,7 @@
 body {
     margin: 0;
     font-family: Helvetica, Arial, sans-serif;
+    background: var(--color3);
 }
 
 /* Header start */
@@ -90,7 +91,6 @@ nav ul li a {
 #profile-image {
     width: 250px;
     height: auto;
-    left: 30px;;;
 }
 
 #profile-image img{
@@ -153,8 +153,8 @@ nav ul li a {
     display: inline-block;
     height: 150px;
     width: 46%;
-    background-image: url();
-    background-size: 200%;
+    background-image: url(../images/coming-soon.webp); /*Image by RossManYYC from https://pixabay.com/photos/coming-soon-chalk-board-blackboard-2550190/*/
+    background-size: cover;
     text-decoration: none;
     padding: 0;
     margin: 10px 2px;
@@ -200,10 +200,6 @@ margin-top: 5px;
 } */
 /* Work section end */
 
-/* Contact me section start */
-
-/* Contact me section end */
-
 /* Secondary work boxes start */
 .run-buddy {
     background-image: url(../images/run-buddy.png);
@@ -212,6 +208,36 @@ margin-top: 5px;
     background-image: url(../images/horiseon.png);
 }
 /* Secondary work boxes end */
+
+/* Contact me section start */
+#contact-me {
+    height: 100px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+.contact-info ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0 25px 0 0;
+    margin-top: 20px;
+}
+
+.contact-info ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--color1);
+    margin: 10px 20px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-bottom-color: var(--color1);
+}
+/* Contact me section end */
 
 /* Media Queries */
 @media screen and (min-width: 575px) {
