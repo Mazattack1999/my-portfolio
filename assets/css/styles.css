@@ -10,8 +10,15 @@
     --color4: #F1E0AC; */
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Header start */
@@ -124,29 +131,64 @@ nav ul li a {
 #work article {
     display:flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding: 0 10px;
     margin: 0 10px;
 }
 
-.published-work {
-    text-decoration: none;
-    position: relative;
-    background-image: url();
+.primary-work {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 20px;
 }
 
-.primary-work, .published-work {
+.primary-work .published-work {
+    width: 96%;
+    background-size: 200%;
+}
+
+.published-work {
+    position: relative;
     display: inline-block;
-    width: 100%;
-    background-image: url(../images/run-buddy.png);
+    height: 150px;
+    width: 46%;
+    background-image: url();
     background-size: 200%;
     text-decoration: none;
     padding: 0;
+    margin: 10px 2px;
+    border: 2px solid var(--color2);
+    border-radius: 1px;
 }
 
 .secondary-work {
 display: flex;
+justify-content: space-around;
 flex-wrap: wrap;
+width: 100%;
+padding: 0 20px;
+margin-top: 5px;
+}
+
+.work-title {
+    display: inline-block;
+    position: absolute;
+    color: var(--color1);
+    bottom: 15px;
+    left: 0px;
+    background: var(--color2);
+    padding: 5px
+}
+
+.work-title h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.work-title p {
+    font-size: 10px;
+    color: var(--color4);
 }
 
 
@@ -158,7 +200,14 @@ flex-wrap: wrap;
 } */
 /* Work section end */
 
+/* Contact me section start */
+
+/* Contact me section end */
+
 /* Secondary work boxes start */
+.run-buddy {
+    background-image: url(../images/run-buddy.png);
+}
 .horiseon {
     background-image: url(../images/horiseon.png);
 }
