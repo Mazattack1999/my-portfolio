@@ -55,9 +55,10 @@ header nav ul {
     align-items: center;
     list-style: none;
     padding: 0 10px 0 0;
+    width: 100%;
 }
 
-nav ul li a {
+header nav ul li a {
     text-decoration: none;
     font-weight: bold;
     color: var(--color4);
@@ -324,7 +325,7 @@ margin-top: 5px;
 
      #profile-image {
          position: absolute;
-         left: 20px;
+         left: 15vw;
          bottom: 40px;
      }
      /* Hero end */
@@ -332,6 +333,17 @@ margin-top: 5px;
  
  /* MEDIA QUERY FOR SMALL DESKTOP SCREENS AND BIGGER */
  @media (min-width: 980px) {
+     /* Header start */
+    header h1 {
+        /* padding: 5px 5px 5px 15vw; */
+        width: 20vw;
+    }
+    header nav {
+        display: inline-block;
+        width: 30vw;
+        margin: 0 5vw 0 0;
+    }
+     /* Header end */
     /* General sections start */
     .portfolio-section {
         flex-direction: row;
@@ -355,4 +367,12 @@ margin-top: 5px;
         width: 80%;
     }
     /* General sections end */
+
+    /* Contact me section start */
+    .contact-info ul {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0 25px 0 0;
+    }
+    /* Contact me section end */
  }
