@@ -65,6 +65,13 @@ header nav ul li a {
     padding: 10px 15px;
     text-shadow: 0 0 15px black;
 }
+
+header nav ul li a:hover {
+    background: var(--color2);
+    /* color: var(--color3); */
+    border-radius: 15px;
+    text-shadow: none;
+}
 /* Header end */
 
 /* Hero start */
@@ -147,14 +154,6 @@ header nav ul li a {
 /* About me section end */
 
 /* Work section start */
-/* #work article {
-    display:flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    padding: 0 10px;
-    margin: 0 10px;
-} */
 
 .primary-work {
     display: flex;
@@ -182,6 +181,7 @@ header nav ul li a {
     margin: 10px 2px;
     border: 2px solid var(--color1);
     border-radius: 1px;
+    transition: background-image 0.25s;
 }
 
 .secondary-work {
@@ -215,20 +215,22 @@ margin-top: 5px;
     color: var(--color4);
 }
 
-
-/* .published-work img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%
-} */
 /* Work section end */
 
 /* Secondary work boxes start */
 .run-buddy {
+    background-image: url(../images/run-buddy-gray.png);
+}
+
+.run-buddy:hover {
     background-image: url(../images/run-buddy.png);
 }
+
 .horiseon {
+    background-image: url(../images/horiseon-gray.png);
+}
+
+.horiseon:hover {
     background-image: url(../images/horiseon.png);
 }
 /* Secondary work boxes end */
@@ -292,6 +294,10 @@ margin-top: 5px;
         justify-content: space-between;
         padding: 0 25px 0 0;
     }
+
+    .contact-info ul li a:hover {
+        color: var(--color2);
+    }
     /* Contact me section end */
  }
  
@@ -301,6 +307,7 @@ margin-top: 5px;
      header {
          flex-direction: row;
          justify-content: space-between;
+         align-items: center;
          padding: 20px 10px 20px 0;
          position: relative;
      }
