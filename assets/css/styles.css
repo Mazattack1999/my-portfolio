@@ -80,15 +80,17 @@ nav ul li a {
 }
 
 .hero p {
-    display:flex;
-    justify-content: center;
+    /* display:flex;
+    justify-content: center; */
+    display: inline-block;
+    text-align: center;
     background: var(--color1);
     color: var(--color4);
-    width: 330px;
     height: 50px;
     bottom: 20px;
     right: 0px;
     font-size: 40px;
+    padding: 5px 5px 10px 5px;
 }
 
 #profile-image {
@@ -120,6 +122,15 @@ nav ul li a {
     border-bottom-color: var(--color1);
     padding: 2px 5px;
 }
+
+.section-content {
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    margin: 0 10px;
+}
 /* General sections end */
 
 /* About me section start */
@@ -135,14 +146,14 @@ nav ul li a {
 /* About me section end */
 
 /* Work section start */
-#work article {
+/* #work article {
     display:flex;
     flex-direction: column;
     width: 100%;
     height: auto;
     padding: 0 10px;
     margin: 0 10px;
-}
+} */
 
 .primary-work {
     display: flex;
@@ -254,6 +265,8 @@ margin-top: 5px;
 /* Contact me section end */
 
 /* Media Queries */
+
+/* MEDIA QUERY FOR MOBILE PHONES AND BIGGER */
 @media (min-width: 575px) {
     /* Work section start */
     .primary-work .published-work{
@@ -281,8 +294,9 @@ margin-top: 5px;
     /* Contact me section end */
  }
  
- /* MEDIA QUERY FOR TABLETS AND SMALLER */
+ /* MEDIA QUERY FOR TABLETS AND BIGGER */
  @media (min-width: 768px) {
+     /* Header start */
      header {
          flex-direction: row;
          justify-content: space-between;
@@ -296,9 +310,49 @@ margin-top: 5px;
         align-items: center;
         padding: 5px 5px 5px 0;
      }
+     /* Header end */
+
+     /* Hero start */
+     .hero {
+         height: 450px;
+     }
+     .hero p {
+         position: absolute;
+         right: 20px;
+         bottom: 40px;
+     }
+
+     #profile-image {
+         position: absolute;
+         left: 20px;
+         bottom: 40px;
+     }
+     /* Hero end */
  }
  
- /* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+ /* MEDIA QUERY FOR SMALL DESKTOP SCREENS AND BIGGER */
  @media (min-width: 980px) {
-    
+    /* General sections start */
+    .portfolio-section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100vw;
+    }
+    .section-title {
+        border-width: 0 5px 0 0;
+        border-style: solid;
+        border-bottom-color: var(--color1);
+        padding: 10px 10px 5px 5px;
+        margin: 0;
+        width: 20%;
+        text-align: right;
+        font-size: 30px;
+        /* background: red; */
+    }
+
+    .section-content{
+        width: 80%;
+    }
+    /* General sections end */
  }
