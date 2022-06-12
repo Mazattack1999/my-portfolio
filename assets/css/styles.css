@@ -241,6 +241,14 @@ margin-top: 5px;
 .meditation-buddy:hover {
     background-image: url(../images/meditation-buddy.png);
 }
+
+.book-bits {
+    background-image: url(../images/book-bits-gray.png);
+}
+
+.book-bits:hover {
+    background-image: url(../images/book-bits.png);
+}
 /* Secondary work boxes end */
 
 /* Contact me section start */
